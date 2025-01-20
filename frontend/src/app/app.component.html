@@ -1,28 +1,28 @@
-<div class="d-flex">
-  <!-- Menu Lateral -->
-  <nav class="bg-light sidebar p-3">
-    <h1 class="brand text-primary">BeautyFlow</h1>
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/clients']">Clientes</a>
+<div style="display: flex; height: 100vh;">
+  <!-- Menu lateral -->
+  <nav style="width: 200px; background-color: #f8f9fa; padding: 20px; box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);">
+    <h1 style="font-size: 1.5rem; color: #007bff;">BeautyFlow</h1>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 10px;">
+        <a routerLink="/clients" style="text-decoration: none; color: #007bff;">Clientes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/services']">Serviços</a>
+      <li style="margin-bottom: 10px;">
+        <a routerLink="/services" style="text-decoration: none; color: #007bff;">Serviços</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/products']">Produtos</a>
+      <li style="margin-bottom: 10px;">
+        <a routerLink="/products" style="text-decoration: none; color: #007bff;">Produtos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/appointments']">Agendamentos</a>
+      <li style="margin-bottom: 10px;">
+        <a routerLink="/appointments" style="text-decoration: none; color: #007bff;">Agendamentos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/reports']">Relatórios</a>
+      <li style="margin-bottom: 10px;">
+        <a routerLink="/reports" style="text-decoration: none; color: #007bff;">Relatórios</a>
       </li>
     </ul>
   </nav>
 
-  <!-- Conteúdo Principal -->
-  <div class="content p-4">
+  <!-- Conteúdo principal -->
+  <main style="flex: 1; padding: 20px;">
     <router-outlet></router-outlet>
-  </div>
+  </main>
 </div>
