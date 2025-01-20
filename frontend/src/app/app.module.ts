@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { NgxMaskModule } from 'ngx-mask';
 
+import { AppRoutingModule } from './app-routing.module'; // Importe o módulo de rotas
 import { AppComponent } from './app.component';
 import { ClientListComponent } from './components/clients/client-list/client-list.component';
 import { ClientFormComponent } from './components/clients/client-form/client-form.component';
+import { ClientsModule } from './features/clients/clients.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,10 @@ import { ClientFormComponent } from './components/clients/client-form/client-for
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: 'clients', component: ClientListComponent },
-      { path: 'clients/create', component: ClientFormComponent },
-      { path: 'clients/edit/:id', component: ClientFormComponent },
-      { path: '', redirectTo: '/clients', pathMatch: 'full' }
-    ])
+    CommonModule,
+    NgxMaskModule.forRoot(),
+    AppRoutingModule  // Use o módulo de rotas aqui
+    ClientsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

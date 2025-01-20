@@ -1,0 +1,33 @@
+.d-flex {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    border-right: 1px solid #ddd; /* Linha separadora */
+  }
+  
+  .sidebar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-link {
+    color: #007bff; /* Azul para os links */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+  }
+  
+  .content {
+    flex: 1;
+    overflow-y: auto;
+  }
+  

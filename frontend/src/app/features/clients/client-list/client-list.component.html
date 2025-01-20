@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Clientes</h2>
+    <a class="btn btn-primary" [routerLink]="['/clients/create']">
+      Novo Cliente
+    </a>
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Buscar clientes..."
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearchChange()"
+    >
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Data de Cadastro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of filteredClients">
+          <td>{{client.name}}</td>
+          <td>{{client.email}}</td>
+          <td>{{client.phone}}</td>
+          <td>{{client.created_at | date:'dd/MM/yyyy'}}</td>
+          <td>
+            <a class="btn btn-sm btn-info me-2" [routerLink]="['/clients/edit', client.id]">
+              Editar
+            </a>
+            <button class="btn btn-sm btn-danger" (click)="deleteClient(client.id)">
+              Excluir
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="filteredClients.length === 0">
+          <td colspan="5" class="text-center">Nenhum cliente encontrado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

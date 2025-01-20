@@ -1,0 +1,9 @@
+/* src/app/features/clients/client-list/client-list.component.css */
+.table th, 
+.table td {
+  vertical-align: middle;
+}
+
+.btn-info {
+  color: white;
+}
