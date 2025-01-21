@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/clients', pathMatch: 'full' },
   { path: '**', redirectTo: '/clients' },
   { path: 'services', component: ServiceListComponent },
+  { path: 'appointments/new', component: AppointmentFormComponent },
 ];
 
 @NgModule({
